@@ -102,3 +102,25 @@ if cgpa >= 7.0:
 else:
     print("Not Eligible")
     print("Reason: CGPA below 7.0")
+
+
+
+# Check Triangle Validity and Type
+
+side1 = float(input("Enter first side: "))
+side2 = float(input("Enter second side: "))
+side3 = float(input("Enter third side: "))
+
+if (side1 + side2 > side3) and (side1 + side3 > side2) and (side2 + side3 > side1):
+
+    print("Valid Triangle")
+
+    if side1 == side2 == side3:
+        print("Type: Equilateral Triangle")
+    elif side1 == side2 or side1 == side3 or side2 == side3:
+        print("Type: Isosceles Triangle")
+    else:
+        print("Type: Scalene Triangle")
+
+else:
+    print("Invalid Triangle")
