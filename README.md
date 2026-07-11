@@ -1,4 +1,5 @@
 # python-conditional-statements
+#if
 # Bank Balance Penalty System
 
 balance = float(input("Enter Account Balance: "))
@@ -11,6 +12,7 @@ if balance < minimum_balance:
 print("Updated Balance:", balance)al_bill)
 
 
+#if-else
 # Loan Approval Based on Credit Score
 
 credit_score = int(input("Enter Credit Score: "))
@@ -22,6 +24,7 @@ else:
     print("Reason: Credit Score is below 700")
 
 
+#if-elif-else
 # Income Tax Calculator
 
 income = float(input("Enter Annual Income: "))
@@ -62,6 +65,7 @@ print("GST:", gst)
 print("Total Bill:", total_bill)
 
 
+#nested-if
 # Loan Approval System
 
 age = int(input("Enter Age: "))
@@ -124,3 +128,31 @@ if (side1 + side2 > side3) and (side1 + side3 > side2) and (side2 + side3 > side
 
 else:
     print("Invalid Triangle")
+
+
+# ATM Withdrawal System
+
+correct_pin = 1234
+balance = 50000
+daily_limit = 10000
+
+pin = int(input("Enter PIN: "))
+amount = float(input("Enter Withdrawal Amount: "))
+
+if pin == correct_pin:
+    if amount <= daily_limit:
+        if amount <= balance:
+            balance = balance - amount
+            print("Transaction Successful")
+            print("Amount Withdrawn:", amount)
+            print("Remaining Balance:", balance)
+        else:
+            print("Transaction Failed")
+            print("Reason: Insufficient Balance")
+    else:
+        print("Transaction Failed")
+        print("Reason: Daily Limit Exceeded")
+else:
+    print("Transaction Failed")
+    print("Reason: Incorrect PIN")
+
