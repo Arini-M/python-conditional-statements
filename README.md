@@ -156,3 +156,17 @@ else:
     print("Transaction Failed")
     print("Reason: Incorrect PIN")
 
+
+# Scholarship Approval System
+
+cgpa = float(input("Enter CGPA: "))
+attendance = float(input("Enter Attendance Percentage: "))
+family_income = float(input("Enter Family Income: "))
+
+if cgpa >= 8.0 and attendance >= 85:
+    if family_income <= 300000:
+        print("Full Scholarship")
+    else:
+        print("Partial Scholarship")
+else:
+    print("Not Eligible")
